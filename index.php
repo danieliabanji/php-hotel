@@ -48,7 +48,7 @@ if (isset($_GET['parking']) && !empty($_GET['parking'])) {
 }
 if (isset($_GET['vote']) && !empty($_GET['vote'])) {
     $vote = $_GET['vote'];
-    $hotels = array_filter($hotels, fn($value) => $value['vote'] == $vote);
+    $hotels = array_filter($hotels, fn($value) => $value['vote'] >= $vote);
     // var_dump($hotels);
 
 }
